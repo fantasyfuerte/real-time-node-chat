@@ -16,6 +16,10 @@ io.on("connection", (socket) => {
   });
 });
 
+io.on("message", (message) => {
+  console.log("Message received: ", message);
+});
+
 app.use(logger("dev"));
 
 app.get("/", (req, res) => {

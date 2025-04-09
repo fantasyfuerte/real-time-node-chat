@@ -10,7 +10,6 @@
     *::before {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -20,19 +19,38 @@
       place-content: center;
       height: 100vh;
     }
-
     #chat {
-      border: 1px solid #c20f0f;
+      border: 3px solid #0dd31e;
+      background-color: #d3fed6;
       border-radius: 20px;
       overflow: hidden;
-      width: 400px;
+      width: 350px;
       height: 90vh;
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      background-color: #0dd31e;
+      padding: 4px;
+    }
+    form input {
+      flex-grow: 1;
     }
   </style>
   <body>
     <section id="chat">
-      <form></form>
+      <form>
+        <input
+          type="text"
+          id="message"
+          placeholder="Type your message here..."
+        />
+        <button id="send" type="button">Send</button>
+      </form>
     </section>
   </body>
 </html>

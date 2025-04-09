@@ -12,6 +12,9 @@
   ></script>
   <script type="module">
     const socket = io();
+
+    const $form = document.getElementById("#form");
+    const $input = document.getElementById("#input");
   </script>
   <style>
     *::after,
@@ -51,7 +54,7 @@
   </style>
   <body>
     <section id="chat">
-      <form>
+      <form id="form">
         <input
           type="text"
           id="message"

@@ -15,6 +15,13 @@
 
     const $form = document.getElementById("form");
     const $input = document.getElementById("message");
+    const $messages = document.querySelector(".messages");
+
+    socket.on("message", (data) => {
+      const message = document.createElement("li");
+      message.textContent = data;
+      $messages.appendChild(message);
+    });
 
     $form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -61,6 +68,7 @@
   </style>
   <body>
     <section id="chat">
+      <ul class="messages"></ul>
       <form id="form">
         <input
           type="text"

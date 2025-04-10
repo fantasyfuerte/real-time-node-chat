@@ -13,8 +13,8 @@
   <script type="module">
     const socket = io();
 
-    const $form = document.getElementById("#form");
-    const $input = document.getElementById("#input");
+    const $form = document.getElementById("form");
+    const $input = document.getElementById("message");
 
     $form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -67,7 +67,7 @@
           id="message"
           placeholder="Type your message here..."
         />
-        <button id="send" type="submit">Send</button>
+        <button id="send">Send</button>
       </form>
     </section>
   </body>

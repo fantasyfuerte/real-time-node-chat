@@ -45,8 +45,8 @@
       height: 100vh;
     }
     #chat {
-      border: 3px solid #0dd31e;
-      background-color: #d3fed6;
+      border: 3px solid #0d3bd3;
+      background-color: #e8f1a2;
       border-radius: 20px;
       overflow: hidden;
       width: 350px;
@@ -54,16 +54,32 @@
       display: flex;
       flex-direction: column;
       justify-content: end;
+      padding: 10px;
     }
     form {
       display: flex;
       align-items: center;
       width: 100%;
-      background-color: #0dd31e;
-      padding: 4px;
+      background-color: #95a1f1;
+      border-radius: 20px;
     }
     form input {
       flex-grow: 1;
+      background: none;
+      border: none;
+      padding: 10px;
+    }
+    form input:focus {
+      outline: none;
+    }
+    #send {
+      background-color: #0d2ed3;
+      border: none;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      padding: 10px;
+      font-weight: 600;
     }
   </style>
   <body>
